@@ -1,0 +1,354 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor--footer:#1d2e3ed4;
+    --cor--fundo: #F3F3F3;
+    --cor--azul: #005A9E;
+    --cor--letra:#F3F3F3;
+    --cor--hover:#dbdbdb43;
+    --cor--vermelha:#E81123;
+    --cor--hover-normal:#DBDBDB;
+    --cor--hover-azul:#196AA7;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/background__win10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+    'section main main main'
+    'section main main main'
+    'section main main main'
+    'section main main main'
+    'footer footer footer footer';
+}
+
+section{
+    grid-area: section;
+    display: flex;
+    padding: 10px 0px;
+    flex-wrap: wrap;
+    gap: 10px;   
+    
+}
+.colun1_trabalho{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.trabalho{
+    width: 126px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+}
+.trabalho:hover{
+    background: var(--cor--hover);
+
+}
+.lixeira{
+    
+    
+}
+.areadetrabalho{
+    width: 50px;
+}
+.tituloicons{
+    color: var(--cor--letra);
+}
+main{
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculadora{
+    width: 45vw;
+    height: 60vh;
+    background: var(--cor--fundo);
+    border: 1px solid var(--cor--footer);
+}
+.header___calculadora{
+    width: 45vw;
+    height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.header__icons{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.header__icons_right{
+    width: 110px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.header__menu{
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.header__menu:hover{
+    width: 80px;
+    height: 35px;
+    background: var(--cor--hover-normal);
+}
+.header__menu__x{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.header__menu__x:hover{
+    background: var(--cor--vermelha);
+    height: 100%;
+}
+#header__nav{    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    
+}
+.header__nav_left{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+        
+}
+.hamburge{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburge span{       
+    width: 25px;
+    height: 2px;
+    background: #000;
+}
+.header__nav__right{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.historico{
+    padding: 5px;
+    background: transparent;
+    border: none;
+}
+.memoria{
+    padding: 5px;
+    background: transparent;
+    border: none;
+}
+.historico:hover{
+    color: var(--cor--hover-normal);
+    border-bottom: 2px solid var(--cor--azul);
+}
+.memoria:hover{
+    color: var(--cor--hover-normal);    
+    border-bottom: 2px solid var(--cor--azul);
+}
+.minimiza__calculadora__inter{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.minimiza__calculadora__inter:hover{
+    width: 30px;
+    height: 30px;
+    background: var(--cor--hover-normal);
+}
+#calculadora{
+    display: grid;
+    grid-template-areas: 
+    'calculo historico '
+    'resultado historico'
+    'memorias historico'
+    'botoes historico' ;
+}
+#caluladora__calculo{
+    grid-area: calculo;
+    text-align: right;
+    padding-right: 75px;
+}
+#calculadora__resultado{
+    grid-area: resultado;
+    text-align: right;
+    padding-right: 75px;
+}
+#calculadora__memoria{
+    grid-area: memorias;
+    display: flex;
+    text-align: right;
+}
+.m_calculadora{
+    width: 80px;
+    height: 30px;
+    color: #CACACA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m_calculadora-{
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.m_calculadora-:hover{
+    width: 80px;
+    height: 30px;
+    background-color: var(--cor--hover);
+    border-radius: 5px;
+    
+}
+#calculadora__butons{
+    grid-area: botoes;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0px 5px ;
+}
+.butons{
+    width: 120px;
+    height: 58px;   
+    border: 1px solid #E5E5E5; 
+    border-radius: 5px;
+    background: #F9F9F9;
+}
+.butons_azul{
+    width: 120px;
+    height: 58px;   
+    border: 1px solid #E5E5E5; 
+    border-radius: 5px;
+    background: var(--cor--azul);
+    color: var(--cor--letra);
+}
+.butons_azul:hover{
+    background: var(--cor--hover-azul);
+    color: var(--cor--letra);
+}
+.butons:hover{
+    
+    background: var(--cor--hover);
+}
+#calculadora_historicos{
+    text-align: right;
+    grid-area: historico;
+    width: 289px;
+}
+
+
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    height: 50px;
+    background: var(--cor--footer);
+    align-self: flex-end;
+    
+}
+/*footer*/
+.footer__left{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.icons_footer_left-i i{
+    font-size: 25px;
+    transition: all 0.5s;
+}
+.icons_footer_left-i i:hover{
+    color: var(--cor--azul);
+}
+.icons_footer_left{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--cor--hover-azul);
+    transition: all 0.5s;
+}
+.icons_footer_left:hover{
+    background: var(--cor--hover);
+}
+.icons_footer_left-cal{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--cor--hover-azul);
+    transition: all 0.5s;
+    background: var(--cor--hover);
+}
+.footer_icons-barras {
+    height: 25px;
+}
+.footer_icons-barras :hover {
+    background: var(--cor--hover-normal);
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor--fundo);
+    padding: 10px 10px;
+}
+.footer__rigth{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+.footer__rigth i {
+    font-size: 20px;
+}
+.incos__footer{
+    background: transparent;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.incos__footer:hover{
+    background: var(--cor--hover);    
+    height: 50px;
+    text-align: center;
+}
+.relogio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.relogio:hover{
+    background-color: var(--cor--hover);
+    height: 50px;
+}
