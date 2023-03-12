@@ -10,38 +10,38 @@
 </head>
 <body>
     <section>
-        
         <div class="colun1_trabalho">
-            <div class="trabalho lixeira">
+            <button class="trabalho lixeira">
                 <img class="areadetrabalho" src="/assets/icons/lixeira.png" alt="Lixeira">
                 <p class="tituloicons">Lixeira</p>
-            </div>
-            <div class="trabalho vs">
+            </button>
+            <button class="trabalho vs">
                 <img class="areadetrabalho" src="/assets/icons/vscode.png" alt="">
                 <p class="tituloicons">Visual Studio Code</p>
-            </div>
-            <div class="trabalho chrome">
+            </button>
+            <button class="trabalho chrome">
                 <img class="areadetrabalho" src="/assets/icons/Google-Chrome-icon.png" alt="">
                 <p class="tituloicons">Google Chrome</p>
-            </div>
-            <div class="trabalho calculadora_incon_trabalho">
+            </button>
+            <button class="trabalho calculadora_incon_trabalho" id="calculadora_abrir">
                 <img class="areadetrabalho" src="/assets/icons/Windows_Calculator_icon.png" alt="">
                 <p class="tituloicons">Calculadora</p>
-            </div>
-            <div class="trabalho steam">
+            </button>
+            <button class="trabalho steam">
                 <img class="areadetrabalho" src="/assets/icons/Steam_icon_logo.svg.png" alt="">
                 <p class="tituloicons">Steam</p>
-            </div>
-            <div class="trabalho discord">
+            </button>
+            <button class="trabalho discord">
                 <img class="areadetrabalho" src="/assets/icons/discord-logo-4-1.png" alt="">
                 <p class="tituloicons">Discord</p>
-            </div>
+            </button>
+            <button class="trabalho notas">
+                <img class="areadetrabalho" src="/assets/icons/Logo_Bloco_de_Notas-pt.png" alt="">
+                <p class="tituloicons">Bloco de notas</p>
+            </button>
         </div>
     <div class="colun1_trabalho colun2_trabalho">
-        <div class="trabalho notas">
-            <img class="areadetrabalho" src="/assets/icons/Logo_Bloco_de_Notas-pt.png" alt="">
-            <p class="tituloicons">Discord</p>
-        </div>
+       
     </div>
     </section>
     <main>
@@ -52,13 +52,14 @@
                     <p>Calculadora</p>
                 </div>
                 <div class="header__icons_right">
-                    <div class="header__menu"><i class="fa fa-window-minimize" aria-hidden="true"></i>
-                    </div>
-                    <div class="header__menu"><i class="fa fa-window-maximize" aria-hidden="true"></i>
-                    </div>
-                    <div class="header__menu__x"><i class="fa fa-times" aria-hidden="true"></i>
-                    </div>
+                    <button class="header__menu"><i class="fa fa-window-minimize" aria-hidden="true"></i>
+                    </button>
+                    <button class="header__menu"><i class="fa fa-window-maximize" aria-hidden="true"></i>
+                    </button>
+                    <button class="header__menu__x" id="header__menu__x"><i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
                 </div>
+                
             </div>
             <div id="header__nav">
                 <div class="header__nav_left">
@@ -118,7 +119,7 @@
         <button class="butons"><sup>+ </sup>/<sup> -</sup></button>
         <button class="butons">0</button>
         <button class="butons">,</button>
-        <button class="butons_azul">=</button>
+        <button class="butons butons_azul">=</button>
                 </div>
                 <div id="calculadora_historicos">
                     <p>99999999</p>
@@ -135,7 +136,7 @@
             <div class="icons_footer_left"><img src="/assets/icons/Steam_icon_logo.svg.png" alt="" class="footer_icons-barras"></div>
             <div class="icons_footer_left"><img src="/assets/icons/vscode.png" alt="" class="footer_icons-barras"></div>
             <div class="icons_footer_left"><img src="/assets/icons/Logo_Bloco_de_Notas-pt.png" alt="g" class="footer_icons-barras"></div>
-            <div class="icons_footer_left-cal"><img src="/assets/icons/Windows_Calculator_icon.png" alt="" class="footer_icons-barras"></div>
+            <button class="icons_footer_left-cal"><img src="/assets/icons/Windows_Calculator_icon.png" alt="" class="calculadora_incon_barra footer_icons-barras"></button>
         </div>
         <div class="footer__rigth">
             <div class="incos__footer"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
@@ -149,5 +150,6 @@
         </div>
     </footer>
     
+    <script src="./script/main.js"></script>
 </body>
 </html>

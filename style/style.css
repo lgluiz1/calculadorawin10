@@ -26,6 +26,8 @@ body{
     'section main main main'
     'section main main main'
     'footer footer footer footer';
+   
+    
 }
 
 section{
@@ -39,11 +41,12 @@ section{
 .colun1_trabalho{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    justify-content: flex-start;
+    gap: 25px;
 }
 .trabalho{
-    width: 126px;
-    height: 80px;
+    width: 10vw;
+    height: 8.0vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,12 +56,19 @@ section{
     background: var(--cor--hover);
 
 }
-.lixeira{
-    
-    
+.colun1_trabalho button{
+    width: 7.5vw;
+    height: 10vh;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
 }
+
 .areadetrabalho{
-    width: 50px;
+    width: 3vw;
 }
 .tituloicons{
     color: var(--cor--letra);
@@ -66,26 +76,28 @@ section{
 main{
     grid-area: main;
     width: 100%;
+    min-width: 500px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .calculadora{
     width: 45vw;
     height: 60vh;
     background: var(--cor--fundo);
     border: 1px solid var(--cor--footer);
+    transform: scale(0);
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
 }
 .header___calculadora{
     width: 45vw;
     height: 35px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-    padding: 0px 10px;
+    justify-content: space-between ;
+    padding: 0px 2px 0px 10px;
 }
 .header__icons{
     height: 35px;
@@ -95,33 +107,34 @@ main{
     gap: 10px;
 }
 .header__icons_right{
-    width: 110px;
-    height: 35px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    gap: 1px;
+    justify-self: right;
 }
+
 .header__menu{
-    width: 80px;
+    width: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
     
 }
-.header__menu:hover{
-    width: 80px;
+.header__menu:hover{    
     height: 35px;
     background: var(--cor--hover-normal);
 }
 .header__menu__x{
+    width: 45px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    border: none;
+    margin-right: 0;
 }
 .header__menu__x:hover{
     background: var(--cor--vermelha);
-    height: 100%;
+    height: 35px;
 }
 #header__nav{    
     display: grid;
@@ -182,6 +195,7 @@ main{
     background: var(--cor--hover-normal);
 }
 #calculadora{
+    max-width: 300px;
     display: grid;
     grid-template-areas: 
     'calculo historico '
@@ -191,16 +205,19 @@ main{
 }
 #caluladora__calculo{
     grid-area: calculo;
-    text-align: right;
-    padding-right: 75px;
+    width: 30vw;
+    display: flex;
+    justify-content: right;
 }
 #calculadora__resultado{
     grid-area: resultado;
-    text-align: right;
-    padding-right: 75px;
+    width: 30vw;
+    display: flex;
+    justify-content: right;
 }
 #calculadora__memoria{
     grid-area: memorias;
+    width: 28vw;
     display: flex;
     text-align: right;
 }
@@ -229,21 +246,28 @@ main{
 }
 #calculadora__butons{
     grid-area: botoes;
+    width: 30vw;
+    height: 40vh;
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
-    padding: 0px 5px ;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;    
+    
 }
 .butons{
-    width: 120px;
-    height: 58px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7vw;
+    height: 5.8vh;
     border: 1px solid #E5E5E5; 
     border-radius: 5px;
     background: #F9F9F9;
 }
 .butons_azul{
-    width: 120px;
-    height: 58px;   
+    width: 7vw;
+    height: 5.8vh;   
     border: 1px solid #E5E5E5; 
     border-radius: 5px;
     background: var(--cor--azul);
@@ -258,9 +282,11 @@ main{
     background: var(--cor--hover);
 }
 #calculadora_historicos{
-    text-align: right;
+    display: flex;
+    width: 14vw;
+    justify-content: flex-end;
     grid-area: historico;
-    width: 289px;
+    
 }
 
 
@@ -277,6 +303,7 @@ footer{
 .footer__left{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 5px;
 }
 .icons_footer_left-i i{
@@ -287,20 +314,26 @@ footer{
     color: var(--cor--azul);
 }
 .icons_footer_left{
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    min-width: 40px;
+    height: 5.2vh;    
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid var(--cor--hover-azul);
+    border-bottom: 2px solid var(--cor--hover-azul);
     transition: all 0.5s;
+}
+.icons_footer_left img{
+   
+    height: 3vh;
 }
 .icons_footer_left:hover{
     background: var(--cor--hover);
 }
 .icons_footer_left-cal{
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    height: 5.2vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,11 +341,17 @@ footer{
     transition: all 0.5s;
     background: var(--cor--hover);
 }
+.icons_footer_left-cal img{
+    height: 3vh;
+}
 .footer_icons-barras {
-    height: 25px;
+    height: 1.5vw;
 }
 .footer_icons-barras :hover {
     background: var(--cor--hover-normal);
+}
+.footer__left button{
+    border: none;
 }
 footer{
     display: flex;
@@ -328,11 +367,11 @@ footer{
     gap: 15px;
 }
 .footer__rigth i {
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 .incos__footer{
     background: transparent;
-    width: 25px;
+    width: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -351,4 +390,64 @@ footer{
 .relogio:hover{
     background-color: var(--cor--hover);
     height: 50px;
+}
+@media screen and (max-width: 1095px) {
+    .header___calculadora{
+        min-width: 375px;
+    }
+    .calculadora{
+        min-width: 375px;
+    }
+    #calculadora__butons{
+        width: 45vw;
+        min-width: 375px;
+    }
+    #caluladora__calculo{
+        width: 44vw;
+        min-width: 370px;
+    }
+    #calculadora__resultado{
+        width: 44vw;
+        min-width: 370px;
+    }
+    #calculadora__memoria{
+        width: 44vw;
+        min-width: 375px;
+    }
+    .butons{
+        width: 11vw;
+        min-width: 90px;
+    }
+    
+
+    #calculadora_historicos{
+        display: none;
+    }
+    .historico{
+        display: none;
+    }
+    .memoria{
+        display: none;
+    }
+    #calculadora{
+        max-width: 300px;
+        display: grid;
+       grid-template-columns: 1fr 1fr;
+    }
+    .header__nav__right{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px){
+    .icons_footer_left-i{
+        margin-right: 10px;
+    }
+.icons_footer_left{
+    display: none;
+}
+.icons_footer_left-cal{
+    width: 35px;
+    display: flex;
+    align-items: center;
+}
 }
