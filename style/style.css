@@ -8,7 +8,7 @@
     --cor--fundo: #F3F3F3;
     --cor--azul: #005A9E;
     --cor--letra:#F3F3F3;
-    --cor--hover:#dbdbdb43;
+    --cor--hover:#dbdbdbe6;
     --cor--vermelha:#E81123;
     --cor--hover-normal:#DBDBDB;
     --cor--hover-azul:#196AA7;
@@ -21,10 +21,7 @@ body{
     background-size: cover;
     display: grid;
     grid-template-areas: 
-    'section main main main'
-    'section main main main'
-    'section main main main'
-    'section main main main'
+    'section main main main'    
     'footer footer footer footer';
    
     
@@ -51,6 +48,8 @@ section{
     flex-direction: column;
     align-items: center;
     transition: all 0.5s;
+    background-color: transparent;
+    border: none;
 }
 .trabalho:hover{
     background: var(--cor--hover);
@@ -90,7 +89,7 @@ main{
     border: 1px solid var(--cor--footer);
     transform: scale(0);
     transform: translateX(0);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;   
 }
 .header___calculadora{
     width: 45vw;
@@ -164,6 +163,19 @@ main{
     align-items: center;
     gap: 20px;
 }
+#digitos{
+    user-select: none;
+}
+.resultado, #digitos{
+    height: 25px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resultado{
+    margin: 5px 0 0 0;
+}
 .historico{
     padding: 5px;
     background: transparent;
@@ -202,6 +214,7 @@ main{
     'resultado historico'
     'memorias historico'
     'botoes historico' ;
+   
 }
 #caluladora__calculo{
     grid-area: calculo;
@@ -228,6 +241,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 .m_calculadora-{
     width: 80px;
@@ -235,6 +249,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 
 }
 .m_calculadora-:hover{
@@ -283,14 +298,74 @@ main{
 }
 #calculadora_historicos{
     display: flex;
-    width: 14vw;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: self-end;
+    width: 14.7vw;
     grid-area: historico;
-    
+    height: 90%;
+    position: relative;
+    overflow: scroll;
+    overflow-x: hidden; /* Adiciona barra de rolagem horizontal quando necessário */
+    overflow-y: scroll; /* Esconde a barra de rolagem vertical */    
 }
 
+/* Estilização da barra de rolagem para navegadores WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 2.5px; /* Largura da barra de rolagem vertical */
+    height: 2.5px; /* Altura da barra de rolagem horizontal */
+    
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--cor--azul); /* Cor do "polegar" (a parte que você arrasta) */
+    border-radius: 2px; /* Arredondamento das bordas do "polegar" */
+  }
+  
+  /* Estilização da barra de rolagem para Firefox */
+  .scrollable-div {
+    scrollbar-width: thin; /* Define a largura da barra de rolagem como fina */
+    scrollbar-color: var(--cor--azul); /* Define as cores do "polegar" e da "trilha" (a parte em que o "polegar" se move) */
+  }
 
-
+#historicos{
+    font-size: 20px;
+    border-radius: 2%;
+    text-align: right;
+    padding-right: 10px;
+    width: 100%;
+    position: absolute;
+}
+#clean{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    color: #636363;
+    font-size: 20px;
+    border: none;
+    background: none;
+    transition: 0.5 all;
+    border-radius: 5px;
+}
+.fa-trash{
+    padding: 10px;
+}
+#clean:hover{
+    background-color: var(--cor--hover);
+}
+.recalculo{
+    margin-top: 5px;
+    font-size: 20px;
+    border-radius: 2%;
+    text-align: right;
+    padding-right: 10px; 
+    width: 100%;
+    padding: 10px 10px 10px 0;
+}
+.recalculo:hover{
+    background-color:var(--cor--hover) ;
+    width: 100%;
+}
 footer{
     grid-area: footer;
     width: 100%;
@@ -417,9 +492,8 @@ footer{
     .butons{
         width: 11vw;
         min-width: 90px;
+        user-select: none;
     }
-    
-
     #calculadora_historicos{
         display: none;
     }
@@ -451,3 +525,4 @@ footer{
     align-items: center;
 }
 }
+

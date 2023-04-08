@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
     <link rel="stylesheet" href="/style/style.css">
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Calculadora</title>
 </head>
+
 <body>
     <section>
         <div class="colun1_trabalho">
@@ -40,9 +42,9 @@
                 <p class="tituloicons">Bloco de notas</p>
             </button>
         </div>
-    <div class="colun1_trabalho colun2_trabalho">
-       
-    </div>
+        <div class="colun1_trabalho colun2_trabalho">
+
+        </div>
     </section>
     <main>
         <div class="calculadora">
@@ -59,7 +61,7 @@
                     <button class="header__menu__x" id="header__menu__x"><i class="fa fa-times" aria-hidden="true"></i>
                     </button>
                 </div>
-                
+
             </div>
             <div id="header__nav">
                 <div class="header__nav_left">
@@ -77,79 +79,100 @@
                 </div>
                 <div class="header__nav__right">
                     <button class="historico">Histórico</button>
-                        <button class="memoria">Memória</button>
+                    <button class="memoria">Memória</button>
                 </div>
             </div>
             <div id="calculadora">
                 <div id="caluladora__calculo">
-                    <p>9+9</p>
+                    <p id="digitos"></p>
                 </div>
                 <div id="calculadora__resultado">
                     <h1 class="resultado">0</h1>
                 </div>
                 <div id="calculadora__memoria">
-                    <div class="m_calculadora"><p>MC</p></div>
-                    <div class="m_calculadora"><p>MR</p></div>
-                    <div class="m_calculadora-"><p>M+</p></div>
-                    <div class="m_calculadora-"><p>M-</p></div>
-                    <div class="m_calculadora-"><p>MS</p></div>
-                    
+                    <div class="m_calculadora">
+                        <p>MC</p>
+                    </div>
+                    <div class="m_calculadora">
+                        <p>MR</p>
+                    </div>
+                    <div class="m_calculadora-">
+                        <p>M+</p>
+                    </div>
+                    <div class="m_calculadora-">
+                        <p>M-</p>
+                    </div>
+                    <div class="m_calculadora-">
+                        <p>MS</p>
+                    </div>
+
                 </div>
                 <div id="calculadora__butons">
-        <button class="butons">%</button>
-        <button class="butons">CE</button>
-        <button class="butons">C</button>
-        <button class="butons">&larr;</button>
-        <button class="butons"><sup>1 </sup>/<sup> x</sup></button>
-        <button class="butons">x<sup>2</sup></button>
-        <button class="butons">&radic;</button>
-        <button class="butons">/</button>
-        <button class="butons">7</button>
-        <button class="butons">8</button>
-        <button class="butons">9</button>
-        <button class="butons">*</button>
-        <button class="butons">4</button>
-        <button class="butons">5</button>
-        <button class="butons">6</button>
-        <button class="butons">-</button>
-        <button class="butons">1</button>
-        <button class="butons">2</button>
-        <button class="butons">3</button>
-        <button class="butons">+</button>
-        <button class="butons"><sup>+ </sup>/<sup> -</sup></button>
-        <button class="butons">0</button>
-        <button class="butons">,</button>
-        <button class="butons butons_azul">=</button>
+                    <button class="butons" onclick="insert('%')">%</button>
+                    <button class="butons" onclick="clean()">CE</button>
+                    <button class="butons" onclick="cleanSoma()">C</button>
+                    <button class="butons" onclick="back()">&larr;</button>
+                    <button class="butons"><sup>1 </sup>/<sup> x</sup></button>
+                    <button class="butons">x<sup>2</sup></button>
+                    <button class="butons">&radic;</button>
+                    <button class="butons" onclick="insert('/')">/</button>
+                    <button class="butons" onclick="insert('7')">7</button>
+                    <button class="butons" onclick="insert('8')">8</button>
+                    <button class="butons" onclick="insert('9')">9</button>
+                    <button class="butons" onclick="insert('*')">*</button>
+                    <button class="butons" onclick="insert('4')">4</button>
+                    <button class="butons" onclick="insert('5')">5</button>
+                    <button class="butons" onclick="insert('6')">6</button>
+                    <button class="butons" onclick="insert('-')">-</button>
+                    <button class="butons" onclick="insert('1')">1</button>
+                    <button class="butons" onclick="insert('2')">2</button>
+                    <button class="butons" onclick="insert('3')">3</button>
+                    <button class="butons" onclick="insert('+')">+</button>
+                    <button class="butons"><sup>+ </sup>/<sup> -</sup></button>
+                    <button class="butons" onclick="insert('0')">0</button>
+                    <button class="butons" onclick="insert('.')">,</button>
+                    <button class="butons butons_azul" onclick="calcular()">=</button>
                 </div>
                 <div id="calculadora_historicos">
-                    <p>99999999</p>
+                    <p id="historicos"></p>
+                    
                 </div>
+                <button id="clean" title="Limpar todo o historico" ><i class="fa fa-trash" aria-hidden="true"></i> </button>          
+
             </div>
         </div>
     </main>
     <footer>
         <div class="footer__left">
             <div class="icons_footer_left-i"><i class="fa fa-windows" aria-hidden="true"></i></div>
-            <div class="icons_footer_left"><img src="/assets/icons/Google-Chrome-icon.png" alt="" class="footer_icons-barras"></div>
+            <div class="icons_footer_left"><img src="/assets/icons/Google-Chrome-icon.png" alt=""
+                    class="footer_icons-barras"></div>
             <div class="icons_footer_left"><img src="/assets/icons/pasta.png" alt="" class="footer_icons-barras"></div>
-            <div class="icons_footer_left"><img src="/assets/icons/discord-logo-4-1.png" alt="" class="footer_icons-barras"></div>
-            <div class="icons_footer_left"><img src="/assets/icons/Steam_icon_logo.svg.png" alt="" class="footer_icons-barras"></div>
+            <div class="icons_footer_left"><img src="/assets/icons/discord-logo-4-1.png" alt=""
+                    class="footer_icons-barras"></div>
+            <div class="icons_footer_left"><img src="/assets/icons/Steam_icon_logo.svg.png" alt=""
+                    class="footer_icons-barras"></div>
             <div class="icons_footer_left"><img src="/assets/icons/vscode.png" alt="" class="footer_icons-barras"></div>
-            <div class="icons_footer_left"><img src="/assets/icons/Logo_Bloco_de_Notas-pt.png" alt="g" class="footer_icons-barras"></div>
-            <button class="icons_footer_left-cal"><img src="/assets/icons/Windows_Calculator_icon.png" alt="" class="calculadora_incon_barra footer_icons-barras"></button>
+            <div class="icons_footer_left"><img src="/assets/icons/Logo_Bloco_de_Notas-pt.png" alt="g"
+                    class="footer_icons-barras"></div>
+            <button class="icons_footer_left-cal"><img src="/assets/icons/Windows_Calculator_icon.png" alt=""
+                    class="calculadora_incon_barra footer_icons-barras"></button>
         </div>
         <div class="footer__rigth">
             <div class="incos__footer"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
             <div class="incos__footer"><i class="fa fa-microphone" aria-hidden="true"></i></div>
             <div class="incos__footer"><i class="fa fa-wifi" aria-hidden="true"></i></div>
-            <div class="incos__footer"><i class="fa fa-volume-up" aria-hidden="true"></i></div>            
+            <div class="incos__footer"><i class="fa fa-volume-up" aria-hidden="true"></i></div>
             <div class="relogio">
-                <span>00:00</span>
-                <span>00/00/0000</span>
+                <span class="hora">00:00</span>
+                <span class="data">00/00/0000</span>
             </div>
         </div>
     </footer>
-    
+
     <script src="./script/main.js"></script>
+    <script src="./script/calculadora.js"></script>
+    <script src="./script/relogio.js"></script>
 </body>
+
 </html>
